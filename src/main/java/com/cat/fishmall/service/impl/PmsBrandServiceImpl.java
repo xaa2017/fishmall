@@ -2,7 +2,6 @@ package com.cat.fishmall.service.impl;
 
 import com.cat.fishmall.mbg.mapper.PmsBrandMapper;
 import com.cat.fishmall.mbg.model.PmsBrand;
-import com.cat.fishmall.mbg.model.PmsBrandExample;
 import com.cat.fishmall.service.PmsBrandService;
 import com.github.pagehelper.PageHelper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +20,7 @@ public class PmsBrandServiceImpl implements PmsBrandService {
 
 	@Override
 	public List<PmsBrand> listAllBrand() {
-		return brandMapper.selectByExample(new PmsBrandExample());
+		return null;
 	}
 
 	@Override
@@ -43,7 +42,7 @@ public class PmsBrandServiceImpl implements PmsBrandService {
 	@Override
 	public List<PmsBrand> listBrand(int pageNum, int pageSize) {
 		PageHelper.startPage(pageNum, pageSize);
-		return brandMapper.selectByExample(new PmsBrandExample());
+		return null;
 	}
 
 	@Override

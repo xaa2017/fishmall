@@ -8,16 +8,16 @@ import java.util.List;
  * Created by macro on 2019/4/19.
  */
 public interface PmsBrandService {
-	com.cat.fishmallList<PmsBrand> listAllBrand();
+	List<PmsBrand> listAllBrand();
 
-	com.cat.fishmallint createBrand(PmsBrand brand);
+	int createBrand(PmsBrand brand);
 
-	com.cat.fishmallint updateBrand(Long id, PmsBrand brand);
+	int updateBrand(Long id, PmsBrand brand);
 
-	com.cat.fishmallint deleteBrand(Long id);
+	int deleteBrand(Long id);
 
-	com.cat.fishmallList<PmsBrand> listBrand(int pageNum, int pageSize);
+	List<PmsBrand> listBrand(int pageNum, int pageSize);
 
-	com.cat.fishmallPmsBrand getBrand(Long id);
+	PmsBrand getBrand(Long id);
 }
 
