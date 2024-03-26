@@ -31,6 +31,10 @@
     from pms_brand
     where id = #{id,jdbcType=BIGINT}
   </select>
+  <select id="listAll" resultType="com.cat.fishmall.mbg.model.PmsBrand">
+    select * from pms_brand
+  </select>
+
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
     delete from pms_brand
     where id = #{id,jdbcType=BIGINT}

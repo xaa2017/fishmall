@@ -2,6 +2,8 @@ package com.cat.fishmall.mbg.mapper;
 
 import com.cat.fishmall.mbg.model.PmsBrand;
 
+import java.util.List;
+
 /**
  * @author white
  * @date 2024/03/22/03:34
@@ -20,4 +22,6 @@ public interface PmsBrandMapper {
     int updateByPrimaryKeyWithBLOBs(PmsBrand record);
 
     int updateByPrimaryKey(PmsBrand record);
+
+    List<PmsBrand> listAll();
 }

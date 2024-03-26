@@ -42,7 +42,7 @@ public class PmsBrandServiceImpl implements PmsBrandService {
 	@Override
 	public List<PmsBrand> listBrand(int pageNum, int pageSize) {
 		PageHelper.startPage(pageNum, pageSize);
-		return null;
+		return brandMapper.listAll();
 	}
 
 	@Override
