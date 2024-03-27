@@ -20,7 +20,7 @@ public class PmsBrandServiceImpl implements PmsBrandService {
 
 	@Override
 	public List<PmsBrand> listAllBrand() {
-		return null;
+		return brandMapper.listAll();
 	}
 
 	@Override

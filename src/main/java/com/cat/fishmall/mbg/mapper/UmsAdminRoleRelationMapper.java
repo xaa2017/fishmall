@@ -1,6 +1,10 @@
 package com.cat.fishmall.mbg.mapper;
 
 import com.cat.fishmall.mbg.model.UmsAdminRoleRelation;
+import com.cat.fishmall.mbg.model.UmsPermission;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 /**
  * @author white
@@ -18,4 +22,9 @@ public interface UmsAdminRoleRelationMapper {
     int updateByPrimaryKeySelective(UmsAdminRoleRelation record);
 
     int updateByPrimaryKey(UmsAdminRoleRelation record);
+
+    /**
+     * 获取用户所有权限(包括+-权限)
+     */
+    List<UmsPermission> getPermissionList(@Param("adminId") Long adminId);
 }

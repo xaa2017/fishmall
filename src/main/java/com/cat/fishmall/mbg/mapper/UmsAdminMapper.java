@@ -1,11 +1,14 @@
 package com.cat.fishmall.mbg.mapper;
 
 import com.cat.fishmall.mbg.model.UmsAdmin;
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 /**
  * @author white
  * @date 2024/03/22/03:34
  */
+@Mapper
 public interface UmsAdminMapper {
     int deleteByPrimaryKey(Long id);
 
@@ -18,4 +21,6 @@ public interface UmsAdminMapper {
     int updateByPrimaryKeySelective(UmsAdmin record);
 
     int updateByPrimaryKey(UmsAdmin record);
+
+    UmsAdmin selectByUserName(@Param("username") String username);
 }
