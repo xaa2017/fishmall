@@ -2,7 +2,7 @@ server:
   port: 8080
 
 cloud:
-  host: 47.236.85.93
+  host: 47.101.10.27
   db:
     port: 3303
   redis:
@@ -12,8 +12,10 @@ cloud:
   mongodb:
     port: 27017
   elasticsearch:
-    port: 9300
+    port: 9200
 spring:
+#  autoconfigure:
+#    exclude: org.springframework.boot.autoconfigure.elasticsearch.jest.JestAutoConfiguration # 不装配 es
   datasource:
     url: jdbc:mysql://${cloud.host}:${cloud.db.port}/fishmall?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
     username: test
@@ -34,7 +36,7 @@ spring:
     elasticsearch:
       repositories:
         enabled: true
-      cluster-nodes: ${cloud.host}:9300 # es的连接地址及端口号
+      cluster-nodes: 47.236.85.93:9200 # es的连接地址及端口号
       cluster-name: elasticsearch # es集群的名称
     mongodb:
       host: ${cloud.host} # mongodb的连接地址
