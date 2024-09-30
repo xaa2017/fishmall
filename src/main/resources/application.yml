@@ -42,6 +42,11 @@ spring:
       host: ${cloud.host} # mongodb的连接地址
       port: ${cloud.mongodb.port} # mongodb的连接端口号
       database: mall-port # mongodb的连接的数据库
+    neo4j:
+      uri: bolt://${cloud.host}:7687
+#      uri: bolt://47.101.10.27:7687
+      username: neo4j
+      password: neo4j2
   rabbitmq:
     host: ${cloud.host} # rabbitmq的连接地址
     port: ${cloud.rabbitmq.port} # rabbitmq的连接端口号
@@ -49,7 +54,6 @@ spring:
     username: mall # rabbitmq的用户名
     password: mall # rabbitmq的密码
     publisher-confirms: true #如果对异步消息需要回调必须设置为true
-
 # 自定义redis key
 redis:
   key:
